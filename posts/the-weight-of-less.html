@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weight of Less</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ink: #1a1a1a;
+            --paper: #faf9f7;
+            --muted: #8a8a8a;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        article {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 12vh 24px 20vh;
+            opacity: 0;
+            animation: appear 0.8s ease 0.1s forwards;
+        }
+
+        .back {
+            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--muted);
+            text-decoration: none;
+            margin-bottom: 6vh;
+            transition: color 0.2s ease;
+        }
+
+        .back:hover {
+            color: var(--ink);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .date {
+            font-size: 1rem;
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 6vh;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            article {
+                padding: 8vh 20px 15vh;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <a href="../index.html" class="back">← Back</a>
+        <h1>The Weight of Less</h1>
+        <time class="date">December 2025</time>
+        
+        <p>Every object you own has weight. Not just physical weight—mental weight. It occupies space in your mind, demands maintenance, creates decisions.</p>
+        
+        <p>I used to think more options meant more freedom. But options are obligations in disguise. Each one asks: choose me, organize me, remember me.</p>
+        
+        <p>There's a lightness that comes from having exactly what you need. Not less than you need—that's deprivation. Exactly what you need. That's freedom.</p>
+        
+        <p>The things you keep should earn their place.</p>
+    </article>
+</body>
+</html>

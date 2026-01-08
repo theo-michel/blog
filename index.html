@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ink: #1a1a1a;
+            --paper: #faf9f7;
+            --muted: #8a8a8a;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        main {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 15vh 24px 20vh;
+        }
+
+        header {
+            margin-bottom: 8vh;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .posts {
+            list-style: none;
+        }
+
+        .post {
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: appear 0.6s ease forwards;
+        }
+
+        .post:nth-child(1) { animation-delay: 0.1s; }
+        .post:nth-child(2) { animation-delay: 0.2s; }
+        .post:nth-child(3) { animation-delay: 0.3s; }
+        .post:nth-child(4) { animation-delay: 0.4s; }
+
+        .post a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .post-title {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            transition: color 0.2s ease;
+        }
+
+        .post a:hover .post-title {
+            color: var(--muted);
+        }
+
+        .post-date {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 10vh 20px 15vh;
+            }
+            .post-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Writing</h1>
+        </header>
+        <ul class="posts">
+            <li class="post">
+                <a href="posts/on-simplicity.html">
+                    <h2 class="post-title">On Simplicity</h2>
+                    <time class="post-date">January 2026</time>
+                </a>
+            </li>
+            <li class="post">
+                <a href="posts/the-weight-of-less.html">
+                    <h2 class="post-title">The Weight of Less</h2>
+                    <time class="post-date">December 2025</time>
+                </a>
+            </li>
+            <li class="post">
+                <a href="posts/silence.html">
+                    <h2 class="post-title">Silence</h2>
+                    <time class="post-date">November 2025</time>
+                </a>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

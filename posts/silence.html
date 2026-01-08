@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silence</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ink: #1a1a1a;
+            --paper: #faf9f7;
+            --muted: #8a8a8a;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        article {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 12vh 24px 20vh;
+            opacity: 0;
+            animation: appear 0.8s ease 0.1s forwards;
+        }
+
+        .back {
+            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--muted);
+            text-decoration: none;
+            margin-bottom: 6vh;
+            transition: color 0.2s ease;
+        }
+
+        .back:hover {
+            color: var(--ink);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .date {
+            font-size: 1rem;
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 6vh;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            article {
+                padding: 8vh 20px 15vh;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <a href="../index.html" class="back">← Back</a>
+        <h1>Silence</h1>
+        <time class="date">November 2025</time>
+        
+        <p>Silence is not empty. It's full of answers.</p>
+        
+        <p>We fill every gap with noise—music, podcasts, notifications. As if silence were something to be avoided. But silence is where thoughts complete themselves.</p>
+        
+        <p>In conversation, the pause is where understanding lives. In music, the rest gives the note its meaning. In design, the whitespace lets the eye breathe.</p>
+        
+        <p>What you don't say matters as much as what you do.</p>
+    </article>
+</body>
+</html>
