@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ink: #1a1a1a;
+    --paper: #faf9f7;
+    --muted: #8a8a8a;
+}
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+/* Layout */
+main, article {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 12vh 24px 20vh;
+}
+
+main {
+    padding-top: 15vh;
+}
+
+/* Animation */
+main, article {
+    opacity: 0;
+    animation: appear 0.8s ease 0.1s forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Home page */
+header {
+    margin-bottom: 8vh;
+}
+
+header h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.posts {
+    list-style: none;
+}
+
+.post {
+    margin-bottom: 3rem;
+}
+
+.post a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.post-title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.post a:hover .post-title {
+    color: var(--muted);
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* Post page */
+.back {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 6vh;
+    transition: color 0.2s ease;
+}
+
+.back:hover {
+    color: var(--ink);
+}
+
+article h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.date {
+    display: block;
+    font-size: 1rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 6vh;
+}
+
+article p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+article p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    main, article {
+        padding: 8vh 20px 15vh;
+    }
+    main {
+        padding-top: 10vh;
+    }
+    .post-title {
+        font-size: 1.5rem;
+    }
+    article h1 {
+        font-size: 2rem;
+    }
+    article p {
+        font-size: 1.125rem;
+    }
+}
